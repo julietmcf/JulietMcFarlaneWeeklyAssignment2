@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		
+
+		<title>Week 12 Slides</title>
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reset.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/black.min.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/highlight/monokai.min.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h3>INFO 3402</h3>
+					<p style="color:#CFB87C; font-weight:bold;">Juliet McFarlane</p>
+					<p style="color:#565A5C">Weekly Assignment 10</h5>
+				</section>
+				
+
+				<section>
+					<h3>Some Kind of Media</h3>
+					<ul>
+                        <img src="CodingImage.png" alt="Coding" class = "center">
+						
+					</ul>
+				</section>
+
+				<!-- Start of a vertical slide -->
+				<section>
+					<section>
+						<h3>Code Block 1</h3>
+						<p><b>Adding Slide Numbers</b></p>
+                        <pre><code class='tex' data-trim data-line-numbers=2,11|3-6|7-10>
+                            \[
+                            Reveal.initialize({ slideNumber: true });
+                            }
+                            \]
+                        </code></pre>
+						
+					</section>
+
+					<section>
+						<h3>Code Block 2</h3>
+						<p>Changing the theme</p>
+                        <p>Replace the word black with other themes.</p>
+						<pre><code class='tex' data-trim data-line-numbers=2,11|3-6|7-10>
+                            \[
+                            <link rel="stylesheet" href="dist/theme/black.css">
+                            }
+                            \]
+                        </code></pre>
+					</section>
+					
+
+			</div>
+		</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/notes/notes.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/markdown/markdown.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/highlight/highlight.min.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				slideNumber: 'h.v',
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
