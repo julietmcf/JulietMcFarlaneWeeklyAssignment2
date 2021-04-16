@@ -82,7 +82,39 @@
 					
 					</script>
 				</section>
-
+				<section>
+					<h3>Code Block</h3>
+					<p><b>This is how I made my second visualization. Notice where I was able to make it averaged by using aggregate.</b></p>
+					<pre><code class='tex' data-trim data-line-numbers=2,11|3-6|7-10>
+						\[
+						<script type="text/javascript">
+							var spec = {
+								"width": 500,
+								"height": 400,
+								"data": {
+									"url": "https://vega.github.io/vega-datasets/data/population.json"
+								},
+								"mark":"bar",
+								"encoding": {
+									"x": {
+										"type": "quantitative", 
+										"field": "year"
+									},
+									"y": {
+										"field": "age",
+										"type": "quantitative",
+										"aggregate":"average"
+									}
+								}
+							};
+							var opt = {"renderer": "canvas", "actions": false};
+							vegaEmbed("#sex-bars", spec, opt);
+							</script>
+						}
+						\]
+					</code></pre>
+					
+				</section>
 				<section>
 					<p>In the first visualization, the relationship is linear. This makes sense because there has been a consistent increase in population over time due to life span, quality of life, etc. The growth is consistent over time.</p>
 					<p>In the second visualization, I am honestly not sure what is happening. The average age at every year is 45, which makes sense from a statistical-ish standpoint (but also not really). However, I think the real reason is that the dataset is not totally accurate and does not have that much data. But again, I am not sure.</p>
