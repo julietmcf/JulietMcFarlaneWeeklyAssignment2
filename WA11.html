@@ -27,53 +27,65 @@
 				</section>
 
 				<section>
-					<p>The population and gender.</p>
-					<p>This graph shows the efficiency of population in comparison to gender. These are about equal.</em>.</p>
+					<p>This graph shows the population over time.</em>.</p>
+					<div id="population-bars"></div>
+						<script type="text/javascript">
+						var spec = {
+							"width": 500,
+							"height": 400,
+							"data": {
+								"url": "https://vega.github.io/vega-datasets/data/population.json"
+							},
+							"mark":"bar",
+							"encoding": {
+								"x": {
+									"type": "quantitative", 
+									"field": "year",
+								},
+								"y": {
+									"field": "people",
+									"type": "quantitative"
+								}
+							}
+						};
+						var opt = {"renderer": "canvas", "actions": false};
+						vegaEmbed("#population-bars", spec, opt);
+						</script>
 				</section>
 
 				<section>
-					<div id="vis0"></div>
-	
-					<script type="text/javascript">
-					
+					<p>This graph shows the average age over time.</em></p>
+					<div id="sex-bars"></div>
+						<script type="text/javascript">
 						var spec = {
-                            {
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "A scatterplot showing body mass and flipper lengths of penguins.",
-  "data": {
-    "url": "data/penguins.json"
-  },
-  "mark": "point",
-  "encoding": {
-    "x": {
-      "field": "Flipper Length (mm)",
-      "type": "quantitative",
-      "scale": {"zero": false}
-    },
-    "y": {
-      "field": "Body Mass (g)",
-      "type": "quantitative",
-      "scale": {"zero": false}
-    },
-    "color": {"field": "Species", "type": "nominal"},
-    "shape": {"field": "Species", "type": "nominal"}
-  }
-}w
-						    	}
-						    },
-							"mark": "point"
+							"width": 500,
+							"height": 400,
+							"data": {
+								"url": "https://vega.github.io/vega-datasets/data/population.json"
+							},
+							"mark":"bar",
+							"encoding": {
+								"x": {
+									"type": "quantitative", 
+									"field": "year"
+								},
+								"y": {
+									"field": "age",
+									"type": "quantitative",
+									"aggregate":"average"
+								}
+							}
 						};
-					
-						var opt = {"renderer": "canvas", "actions": false};  /* Options for the embedding */
-					
-						vegaEmbed("#vis0", spec, opt);
+						var opt = {"renderer": "canvas", "actions": false};
+						vegaEmbed("#sex-bars", spec, opt);
+						</script>
 					
 					</script>
 				</section>
 
 				<section>
-					<p>This relationship is expected because it is linear.</p>
-					<p>We would expect an increase population over time.</p>
+					<p>In the first visualization, the relationship is linear. This makes sense because there has been a consistent increase in population over time due to life span, quality of life, etc. The growth is consistent over time.</p>
+					<p>In the second visualization, I am honestly not sure what is happening. The average age at every year is 45, which makes sense from a statistical-ish standpoint (but also not really). However, I think the real reason is that the dataset is not totally accurate and does not have that much data. But again, I am not sure.</p>
 				</section>
 			</div>
 		</div>
